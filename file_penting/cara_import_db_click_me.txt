@@ -1,0 +1,5 @@
+Link download DB : 
+https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2019.bak
+
+Tutorial :
+https://learn.microsoft.com/en-us/sql/relational-databases/backup-restore/quickstart-backup-restore-database?view=sql-server-ver16&tabs=ssms
