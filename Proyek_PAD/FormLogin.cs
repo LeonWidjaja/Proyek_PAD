@@ -36,12 +36,31 @@ namespace Proyek_PAD
                     MessageBox.Show("Password salah!");
                     return;
                 }
+
+                FormAdmin formAdmin = new FormAdmin();
+                formAdmin.ShowDialog();
             }
 
             AdventureWorks2019Entities context = new AdventureWorks2019Entities();
-            SalesPerson user = from SalesPerson in context.SalesPersons
-                               join Person in context.Persons on SalesPerson.BusinessEntityID equals Person.BusinessEntityID
-                               where Person.EmailPromotion == 1 && Person.EmailAddress == username
+            SalesPerson user = (from SalesPerson sp in context.SalesPersons
+                                join Employee em in context.Employees on sp.BusinessEntityID equals em.BusinessEntityID
+                                where em.LoginID == concat_username
+                                select sp).FirstOrDefault();
+
+            if (user == null)
+            {
+                MessageBox.Show("Username tidak ditemukan!");
+                return;
+            }
+
+            if (username != password)
+            {
+                MessageBox.Show("Password salah!");
+                return;
+            }
+
+            FormSalesPerson formSalesPerson = new FormSalesPerson(user);
+            formSalesPerson.ShowDialog();
         }
     }
 }
