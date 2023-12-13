@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -75,7 +76,7 @@ namespace Proyek_PAD
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -101,17 +102,29 @@ namespace Proyek_PAD
                 {
                     if (!dtpHiredDate.Text.Equals(""))
                     {
-                        SalesPerson salesPerson = new SalesPerson();
-                        salesPerson.BusinessEntityID = Convert.ToInt32(tbID.Text);
-                        salesPerson.TerritoryID = 0;
-                        salesPerson.SalesQuota = 0;
-                        salesPerson.Bonus = 0;
-                        salesPerson.CommissionPct = 0;
-                        salesPerson.SalesYTD = 0;
-                        salesPerson.SalesLastYear = 0;
-                        salesPerson.ModifiedDate = DateTime.Now;
-                        aw.SalesPersons.Add(salesPerson);
-                        aw.SaveChanges();
+                        var transaction = aw.Database.BeginTransaction();
+                        try
+                        {
+                            SalesPerson salesPerson = new SalesPerson();
+                            salesPerson.BusinessEntityID = Convert.ToInt32(tbID.Text);
+                            salesPerson.TerritoryID = null;
+                            salesPerson.SalesQuota = 200000;
+                            salesPerson.Bonus = 0;
+                            salesPerson.CommissionPct = (decimal)0.005;
+                            salesPerson.SalesYTD = 0;
+                            salesPerson.SalesLastYear = 0;
+                            salesPerson.ModifiedDate = DateTime.Now;
+                            aw.SalesPersons.Add(salesPerson);
+                            aw.SaveChanges();
+
+                            transaction.Commit();
+                            MessageBox.Show("Berhasil add SalesPerson!");
+                        }
+                        catch (Exception ex)
+                        {
+                            transaction.Rollback();
+                            MessageBox.Show(ex.ToString());
+                        }
                     }
                     else
                     {
