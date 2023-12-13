@@ -21,8 +21,9 @@ namespace Proyek_PAD
         {
             string username = tbUsername.Text;
             string password = tbPassword.Text;
+            string concat_username = @"adventure-works\" + username;
 
-            if(username == "" || password == "")
+            if (username == "" || password == "")
             {
                 MessageBox.Show("Username dan password tidak boleh kosong!");
                 return;
@@ -30,22 +31,17 @@ namespace Proyek_PAD
 
             if (username == "admin")
             {
-                if(password != "admin")
+                if (password != "admin")
                 {
                     MessageBox.Show("Password salah!");
                     return;
                 }
-                else if(password == "admin")
-                {
-                    FormAdmin formAdmin = new FormAdmin();
-                    formAdmin.Show();
-                }
             }
 
-            /*AdventureWorks2019Entities context = new AdventureWorks2019Entities();
+            AdventureWorks2019Entities context = new AdventureWorks2019Entities();
             SalesPerson user = from SalesPerson in context.SalesPersons
                                join Person in context.Persons on SalesPerson.BusinessEntityID equals Person.BusinessEntityID
-                               where Person.EmailPromotion == 1 && Person.EmailAddress == username*/
+                               where Person.EmailPromotion == 1 && Person.EmailAddress == username
         }
     }
 }

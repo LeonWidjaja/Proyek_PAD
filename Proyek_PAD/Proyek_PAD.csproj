@@ -148,6 +148,12 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSalesPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSalesPerson.Designer.cs">
+      <DependentUpon>FormSalesPerson.cs</DependentUpon>
+    </Compile>
     <Compile Include="Illustration.cs">
       <DependentUpon>AdventuresModel.tt</DependentUpon>
     </Compile>
@@ -299,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSalesPerson.resx">
+      <DependentUpon>FormSalesPerson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
