@@ -4,13 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="25583765dcdc43d59fec6abb9a7881ae" Name="Diagram1">
+      <Diagram DiagramId="25583765dcdc43d59fec6abb9a7881ae" Name="Diagram1" ZoomLevel="64">
         <EntityTypeShape EntityType="AdventureWorks2019Model.AWBuildVersion" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2019Model.DatabaseLog" Width="1.5" PointX="2.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2019Model.ErrorLog" Width="1.5" PointX="4.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2019Model.Department" Width="1.5" PointX="12.75" PointY="42.625" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2019Model.Employee" Width="1.5" PointX="9.75" PointY="4.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="AdventureWorks2019Model.EmployeeDepartmentHistory" Width="1.5" PointX="15" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorks2019Model.EmployeeDepartmentHistory" Width="2.625" PointX="15" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2019Model.EmployeePayHistory" Width="1.5" PointX="12" PointY="5.125" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2019Model.JobCandidate" Width="1.5" PointX="12" PointY="14.125" IsExpanded="true" />
         <EntityTypeShape EntityType="AdventureWorks2019Model.Shift" Width="1.5" PointX="12.75" PointY="45.375" IsExpanded="true" />

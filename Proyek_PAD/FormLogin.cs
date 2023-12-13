@@ -35,12 +35,17 @@ namespace Proyek_PAD
                     MessageBox.Show("Password salah!");
                     return;
                 }
+                else if(password == "admin")
+                {
+                    FormAdmin formAdmin = new FormAdmin();
+                    formAdmin.Show();
+                }
             }
 
-            AdventureWorks2019Entities context = new AdventureWorks2019Entities();
+            /*AdventureWorks2019Entities context = new AdventureWorks2019Entities();
             SalesPerson user = from SalesPerson in context.SalesPersons
                                join Person in context.Persons on SalesPerson.BusinessEntityID equals Person.BusinessEntityID
-                               where Person.EmailPromotion == 1 && Person.EmailAddress == username
+                               where Person.EmailPromotion == 1 && Person.EmailAddress == username*/
         }
     }
 }

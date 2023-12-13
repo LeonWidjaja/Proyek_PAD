@@ -294,6 +294,9 @@
     <Compile Include="WorkOrderRouting.cs">
       <DependentUpon>AdventuresModel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
