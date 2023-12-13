@@ -90,7 +90,7 @@ namespace Proyek_PAD
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            MessageBox.Show("Are you sure you want to delete this employee?", "Delete Employee", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
         }
 
         private void button3_Click(object sender, EventArgs e)
