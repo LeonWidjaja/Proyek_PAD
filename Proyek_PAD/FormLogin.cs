@@ -59,7 +59,7 @@ namespace Proyek_PAD
                 return;
             }
 
-            FormSalesPerson formSalesPerson = new FormSalesPerson(user);
+            FormDetailSalesPerson formSalesPerson = new FormDetailSalesPerson(user);
             formSalesPerson.ShowDialog();
         }
     }

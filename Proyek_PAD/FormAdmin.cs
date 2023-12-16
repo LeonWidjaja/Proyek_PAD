@@ -141,5 +141,14 @@ namespace Proyek_PAD
                 MessageBox.Show("Name cannot be empty!");
             }
         }
+
+        private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int idx = e.RowIndex;
+            string BusinessEntityID = dataGridView2.Rows[idx].Cells[0].Value.ToString();
+
+            FormSalesPerson baru = new FormSalesPerson(BusinessEntityID);
+            baru.ShowDialog();
+        }
     }
 }
